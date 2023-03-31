@@ -17,27 +17,31 @@ int main()
 		{1,1,1,1,1,1,1,1,1,1},
 	};
 
-	int PlayerX = 1;
-	int PlayerY = 1;
-
-	for (int Y = 0; Y < 10; ++Y)
+	while (true)
 	{
-		for (int X = 0; X < 10; ++X)
+		int PlayerX = 1;
+		int PlayerY = 1;
+
+		for (int Y = 0; Y < 10; ++Y)
 		{
-			if (PlayerX == X && PlayerY == Y)
+			for (int X = 0; X < 10; ++X)
 			{
-				cout << "P";
+				if (PlayerX == X && PlayerY == Y)
+				{
+					cout << "P";
+				}
+				else if (Map[Y][X] == 1)
+				{
+					cout << "#";
+				}
+				else if (Map[Y][X] == 0)
+				{
+					cout << " ";
+				}
 			}
-			else if (Map[Y][X] == 1)
-			{
-				cout << "#";
-			}
-			else if (Map[Y][X] == 0)
-			{
-				cout << " ";
-			}
+			cout << endl;
 		}
-		cout << endl;
+		system("cls");
 	}
 
 
